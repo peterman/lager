@@ -1,0 +1,107 @@
+table {
+ 	border-collapse: collapse;
+ }
+ 
+ td,
+ th {
+ 	padding: 1em;
+ }
+ 
+ th:first-child {
+ 	padding-left: .5em;
+ }
+ 
+ th:last-child,
+ td:last-child {
+ 	padding-right: .5em;
+ }
+ 
+ thead th {
+ 	border-bottom: 2px solid lightblue;
+ }
+ 
+ tbody th {
+ 	font-weight: normal;
+ 	text-align: left;
+ }
+ 
+ th a {
+ 	background: url("https://wiki.selfhtml.org/images/6/6b/Pdf.png") no-repeat left center;
+ 	padding: 15px 5px 15px 40px;
+ }
+ 
+ td {
+ 	text-align: center;
+ }
+ 
+ td:nth-child(3) {
+ 	text-align: right;
+ }
+ 
+ td:nth-child(4) {
+ 	color: red;
+ 	font-weight: bold;
+ }
+ 
+ td.paid {
+ 	color: green;
+ 	font-weight: normal;
+ }
+ 
+ @media screen and (max-width: 42em) {
+ 	thead {
+ 		display: none;
+ 	}
+ 	tr:first-child {
+ 		border-top: 2px solid lightblue;
+ 	}
+ 	tr {
+ 		border-bottom: 2px solid lightblue;
+ 		padding: .5em 2em 1em;
+ 	}
+ 	th::before {
+ 		content: "Rechnung: ";
+ 	}
+ 	td:nth-child(2)::before {
+ 		content: "Datum: ";
+ 	}
+ 	td:nth-child(3)::before {
+ 		content: "Höhe: ";
+ 	}
+ 	td:nth-child(4)::before {
+ 		content: "Status: ";
+ 	}
+ 	td.paid + td::before {
+ 		content: "Zahlungseingang: ";
+ 	}
+ 	table,
+ 	tbody,
+ 	tr {
+ 		display: block;
+ 	}
+ 	tbody th {
+ 		display: block;
+ 		font-weight: bold;
+ 	}
+ 	th a {
+ 		font-weight: normal;
+ 	}
+ 	td {
+ 		display: inline-block;
+ 		min-width: 30%;
+ 		padding: .2em 2em;
+ 		text-align: left;
+ 	}
+ 	td:nth-child(3) {
+ 		text-align: left;
+ 	}
+ }
+ 
+ @media screen and (max-width: 33em) {
+ 	td {
+ 		display: block;
+ 	}
+ 	tr {
+ 		padding: .5em .5em 1em;
+ 	}
+ }
