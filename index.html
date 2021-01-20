@@ -5,8 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  			$("button").click(function(){
+    				$.getJSON("demo_ajax_json.js", function(result){
+      					$.each(result, function(i, field){
+        					$("div").append(field + " ");
+      					});
+    				});
+  			});
+		});
+	</script>
 </head>
 <body>
 
@@ -18,6 +29,8 @@
 
 	<div role="main" class="ui-content">
 		<p>Page content goes here.</p>
+		<button>Get JSON data</button>
+		<div></div>
 	</div><!-- /content -->
 
 	<div data-role="footer">
