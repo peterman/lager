@@ -1,0 +1,191 @@
+[
+ {
+   "id": 1,
+   "artikel": "Dresdner Felsenkeller",
+   "einheit": "Kasten",
+   "soll": 6,
+   "ist": 1
+ },
+ {
+   "id": 2,
+   "artikel": "Radeberger Pils",
+   "einheit": "Kasten",
+   "soll": 6,
+   "ist": 1
+ },
+ {
+   "id": 3,
+   "artikel": "Hasseröder Pils",
+   "einheit": "Kasten",
+   "soll": 6,
+   "ist": 1
+ },
+ {
+   "id": 4,
+   "artikel": "Feldschlösschen radler naturtrüb",
+   "einheit": "Kasten",
+   "soll": 3,
+   "ist": 1
+ },
+ {
+   "id": 5,
+   "artikel": "Feldschlösschen radler naturtrüb alkoholfei",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 6,
+   "artikel": "Becks alkoholfrei",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 7,
+   "artikel": "Weizen",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 8,
+   "artikel": "Eibauer Schwarzbier",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 9,
+   "artikel": "Porter Kirsch",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 10,
+   "artikel": "Bionade Hollunder",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ },
+ {
+   "id": 11,
+   "artikel": "Boinade Kräuter",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ },
+ {
+   "id": 12,
+   "artikel": "Bionade Inger/Orange",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ },
+ {
+   "id": 13,
+   "artikel": "Tonic",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 14,
+   "artikel": "Fanta",
+   "einheit": "Kasten",
+   "soll": 3,
+   "ist": 1
+ },
+ {
+   "id": 15,
+   "artikel": "Coca Cola",
+   "einheit": "Kasten",
+   "soll": 3,
+   "ist": 1
+ },
+ {
+   "id": 16,
+   "artikel": "Sprite",
+   "einheit": "Kasten",
+   "soll": 3,
+   "ist": 1
+ },
+ {
+   "id": 17,
+   "artikel": "Saft Apfel",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 18,
+   "artikel": "Saft Orange",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 19,
+   "artikel": "Saft Kirsch",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 20,
+   "artikel": "Saft Banane",
+   "einheit": "Kasten",
+   "soll": 1,
+   "ist": 1
+ },
+ {
+   "id": 21,
+   "artikel": "Adello still",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ },
+ {
+   "id": 22,
+   "artikel": "Adello medium",
+   "einheit": "Kasten",
+   "soll": 4,
+   "ist": 1
+ },
+ {
+   "id": 23,
+   "artikel": "Adello classic",
+   "einheit": "Kasten",
+   "soll": 4,
+   "ist": 1
+ },
+ {
+   "id": 24,
+   "artikel": "Dornfelder trocken Rotwein",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ },
+ {
+   "id": 25,
+   "artikel": "Dornfelder halbtrocken Rotwein",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ },
+ {
+   "id": 26,
+   "artikel": "Riesling trocken Weißwein",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ },
+ {
+   "id": 27,
+   "artikel": "Riesling halbtrocken Weißwein",
+   "einheit": "Kasten",
+   "soll": 2,
+   "ist": 1
+ }
+]
