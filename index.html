@@ -9,13 +9,19 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 		$(document).ready(function(){
-  			$("button").click(function(){
-    				$.getJSON("lager.json", function(result){
-      					$.each(result, function(i, field){
-        					$("div").append(field + " ");
-      					});
-    				});
-  			});
+			$.ajax({
+			    url: 'lager.json',
+			    dataType: 'json',
+			    success: function(data) {
+				for (var i=0; i<data.length; i++) {
+				    var row = $('<tr><td>' + data[i].id+ '</td><td>' + data[i].artikel + '</td><td>' + data[i].soll + '</td><td>' + data[i].ist + '</td></tr>');
+				    $('#myTable').append(row);
+				}
+			    },
+			    error: function(jqXHR, textStatus, errorThrown){
+				alert('Error: ' + textStatus + ' - ' + errorThrown);
+			    }
+			});
 		});
 	</script>
 </head>
