@@ -9,12 +9,7 @@ td {
 table {
  	border-collapse: collapse;
  }
- 
- td,
- th {
- 	padding: 1em;
- }
- 
+  
  th:first-child {
  	padding-left: .5em;
  }
