@@ -45,8 +45,8 @@
                         
                         foreach($data as $item) {
                             echo '<tr>';
-                            echo '<td><input type="text" id="id" name="id" value="'.$item->id.'" disabled size="2"></td>';
-                            echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" disabled size="20"</td>';
+                            echo '<td><input type="text" id="id" name="id" value="'.$item->id.'" readonly size="2"></td>';
+                            echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="20"</td>';
                             echo '<td>'.$item->soll.'</td>';
                             echo'</tr>';
                         }
