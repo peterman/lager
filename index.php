@@ -44,9 +44,9 @@
                         $data = json_decode($json);
                         
                         foreach($data as $item) {
-                            echo '<tr><br>';
-                            echo '<td><input type="text" id="id" name="id" value="'.$item->id.'" readonly size="2"></td><br>';
-                            echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="20"</td><br>';
+                            echo '<tr>';
+                            echo '<td><input type="text" id="id" name="id" value="'.$item->id.'" readonly size="2"></td>\n';
+                            echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="20"</td>\n';
                             echo '<td>'.$item->soll.'</td>';
                             echo'</tr>';
                         }
