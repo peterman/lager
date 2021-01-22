@@ -47,8 +47,8 @@
                             echo '<tr><br>';
                             echo '<td><input type="text" id="id" name="id" value="'.$item->id.'" readonly size="2"></td><br>';
                             echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="20"</td><br>';
-                            echo '<td>'.$item->soll.'</td><br>';
-                            echo'</tr><br>';
+                            echo '<td>'.$item->soll.'</td>';
+                            echo'</tr>';
                         }
                     ?>
                         
