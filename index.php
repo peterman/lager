@@ -31,6 +31,7 @@
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
+		<form>
 		<table id="myTable">
 		    <tr>
 			<th>Nr</th>
@@ -44,7 +45,7 @@
                         
                         foreach($data as $item) {
                             echo '<tr>';
-                            echo '<td>'.$item->id.'</td>';
+                            echo '<td><input type="text" id="fname" name="fname" value="'.$item->id.'"></td>';
                             echo '<td>'.$item->artikel.'</td>';
                             echo '<td>'.$item->soll.'</td>';
                             echo'</tr>';
@@ -52,6 +53,7 @@
                     ?>
                         
 		</table>
+		</form>	
 	</div><!-- /content -->
 
 	<div data-role="footer">
