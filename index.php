@@ -18,7 +18,7 @@
                         });
                         return obj;
                     }).get();
-                    alert(json.stringify(data));
+                    alert(JSON.stringify(data));
 			});
 		  });
 	</script>
