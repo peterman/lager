@@ -43,7 +43,7 @@ Bestellung Vereinshaus
 </table>
 <br>
 
-<table cellpadding="3" cellspacing="0" style="width: 100%;" border="0">
+<table cellpadding="3" cellspacing="0" style="width: 100%; border-collapse:collapse;" border="0">
 	<tr style="background-color: #cccccc; padding:5px;">
 		<td style="padding:5px;"><b>Bezeichnung</b></td>
 		<td style="text-align: center;"><b>Menge</b></td>
