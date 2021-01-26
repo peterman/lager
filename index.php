@@ -62,7 +62,7 @@
 	
 
 	<div role="main" class="ui-content">
-		<form>
+		
                     <table id="myTable">
                         <tr>
                             <th>Nr</th>
@@ -94,10 +94,10 @@
                         ?>
 
                     </table>
-		</form>	
+			<button>klick here</button>
 	</div><!-- /content -->
 
-	<button>klick here</button>
+	
 </div><!-- /page -->
 
 </body>
