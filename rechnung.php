@@ -12,9 +12,9 @@ $rechnungs_footer = nl2br("\nWir bitten um eine Begleichung der Rechnung innerha
 ");
 
 $filename = 'lager.json';
-$json = file_get_contents($filename);
-$data = json_decode($json);
-
+//$json = file_get_contents($filename);
+//$data = json_decode($json);
+$data = json_decode(file_get_contents('php://input'));
 $pdfName = $bestell_nummer.".pdf";
 
 
@@ -119,12 +119,12 @@ $pdf->writeHTML($html, true, false, true, false, '');
 //Ausgabe der PDF
 
 //Variante 1: PDF direkt an den Benutzer senden:
-$pdf->Output($pdfName, 'I');
+//$pdf->Output($pdfName, 'I');
 
 //Variante 2: PDF im Verzeichnis abspeichern:
-//$pdfPfad = dirname(__FILE__).'/'.$pdfName;
-//$pdf->Output($pdfPfad, 'F');
-//echo 'PDF herunterladen: <a href="'.$pdfName.'">'.$pdfName.'</a>';
+$pdfPfad = dirname(__FILE__).'/'.$pdfName;
+$pdf->Output($pdfPfad, 'F');
+echo $pdfName;
 
 //$dateien = array($pdfPfad);
 //mail("admin@pfeiffer-privat.de", "Bstellung Vereinshaus", "Euer Nachrichtentext", "Absendername", "absender@domain.de", "antwortadresse@domain.de", $dateien);

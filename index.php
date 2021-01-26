@@ -10,15 +10,24 @@
 	<script>
 	    $(document).ready(function(){
 			$('#MyButton').click(function(){
-			   event.preventDefault();
-                    var data = $('tr').map(function(){
-                        var obj={};
-                        $(this).find('input, select').each(function(){
-                            obj[this.name]=$(this).val();
-                        });
-                        return obj;
-                    }).get();
-                    alert(JSON.stringify(data));
+                            event.preventDefault();
+                            var data = $('tr').map(function(){
+                                var obj={};
+                                $(this).find('input, select').each(function(){
+                                   obj[this.name]=$(this).val();
+                                });
+                                return obj;
+                            }).get();
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('POST','rechnung.php',true);
+                            xhr.setRequestHeader('Content-Type','application/json; charset=UTF-8');
+                            xhr.onreadystatechange = function() {
+                                if(xhr.readyState == 4 && xhr.status == 200) {
+                                    window.location.assign(xhr.responseText);
+                                }
+                            }
+                            xhr.send(JSON.stringify(data));
+                            
 			});
 		  });
 	</script>
@@ -70,7 +79,9 @@
                                 echo '<tr>';
                                 echo '<td><div class="ui-field-contain"><input type="text" id="id" name="id" value="'.$item->id.'" readonly size="2"></div></td>'."\n";
                                 echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="35"</td>'."\n";
-                                echo '<td><select name="call" id="call" value="'.$item->soll.'">."\n";';
+                                
+                                
+                                echo '<td><select name="soll" id="soll" value="'.$item->soll.'">."\n";';
                                         echo '<option>0</option>'."\n";
                                         echo '<option>1</option>'."\n";
                                         echo '<option>2</option>'."\n";
