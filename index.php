@@ -20,7 +20,7 @@
                     console.log(json.stringify(data));
                 });
 				
-			$('button').click(function() {
+			function myFunction() {
     
 				event.preventDefault();
                     var data = $('tr').map(function(){
@@ -94,7 +94,7 @@
                         ?>
 
                     </table>
-			<button>klick here</button>
+			<button onclick="myFunction()>klick here</button>
 	</div><!-- /content -->
 
 	
