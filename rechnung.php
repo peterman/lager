@@ -53,7 +53,7 @@ Bestellung Vereinshaus
 	
 foreach($data as $posten) {
 	$menge = $posten->soll;
-	$html .= '<tr style="border-top:1px solid black;">
+	$html .= '<tr style="border-bottom: 1px solid black;">
                 <td>'.$posten->artikel.'</td>
 				<td style="text-align: center;">'.$posten->soll.'</td>		
 				
