@@ -19,6 +19,19 @@
                     }).get();
                     console.log(json.stringify(data));
                 });
+				
+			$('button').click(function() {
+    
+				var data = $('table tr:gt(0)').map(function() {
+					return {
+						name:  $(this.cells[0]).text(),
+						email: $(this.cells[1]).text()
+					};
+				}).get();
+				
+				alert(JSON.stringify(data, null, 4))
+				
+			});
 	</script>
 </head>
 <body>
@@ -84,9 +97,7 @@
 		</form>	
 	</div><!-- /content -->
 
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
+	<button>klick here</button>
 </div><!-- /page -->
 
 </body>
