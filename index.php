@@ -94,7 +94,7 @@
                         ?>
 
                     </table>
-			<button onclick="myFunction()>klick here</button>
+			<button onclick="myFunction()">klick here</button>
 	</div><!-- /content -->
 
 	
