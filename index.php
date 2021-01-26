@@ -8,21 +8,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	
 	<script>
-	        $(document).on('click', '#save',function(event){
-                    event.preventDefault();
-                    var data = $('tr').map(function(){
-                        var obj={};
-                        $(this).find('input, select').each(function(){
-                            obj[this.name]=$(this).val();
-                        });
-                        return obj;
-                    }).get();
-                    console.log(json.stringify(data));
-                });
-				
-			function myFunction() {
-    
-				event.preventDefault();
+	    $(document).ready(function(){
+			$('#MyButton').click(function(){
+			   event.preventDefault();
                     var data = $('tr').map(function(){
                         var obj={};
                         $(this).find('input, select').each(function(){
@@ -32,7 +20,11 @@
                     }).get();
                     alert(json.stringify(data));
 			});
+		  });
 	</script>
+
+
+
 </head>
 <body>
 
@@ -94,7 +86,7 @@
                         ?>
 
                     </table>
-			<button onclick="myFunction()">klick here</button>
+			<input type="button" value="send" id="MyButton" >
 	</div><!-- /content -->
 
 	
