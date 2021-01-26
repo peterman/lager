@@ -22,15 +22,15 @@
 				
 			$('button').click(function() {
     
-				var data = $('table tr:gt(0)').map(function() {
-					return {
-						name:  $(this.cells[0]).text(),
-						email: $(this.cells[1]).text()
-					};
-				}).get();
-				
-				alert(JSON.stringify(data, null, 4))
-				
+				event.preventDefault();
+                    var data = $('tr').map(function(){
+                        var obj={};
+                        $(this).find('input, select').each(function(){
+                            obj[this.name]=$(this).val();
+                        });
+                        return obj;
+                    }).get();
+                    alert(json.stringify(data));
 			});
 	</script>
 </head>
