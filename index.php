@@ -62,7 +62,7 @@
 		
 	
 
-	<div role="main" class="container">
+	<div role="main" class="container-fluid">
 		
                     <table id="myTable">
                         <tr>
