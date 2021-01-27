@@ -62,7 +62,7 @@
 		
 	
 
-	<div role="main" class="ui-content">
+	<div role="main" class="container">
 		
                     <table id="myTable">
                         <tr>
