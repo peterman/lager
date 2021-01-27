@@ -3,7 +3,7 @@
     <title>Bestellungen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	
@@ -13,7 +13,7 @@
                             event.preventDefault();
                             var data = $('tr').map(function(){
                                 var obj={};
-                                $(this).find('td').each(function(){
+                                $(this).find('input, select').each(function(){
                                    obj[this.name]=$(this).val();
                                 });
                                 return obj;
@@ -29,31 +29,6 @@
                             xhr.send(JSON.stringify(data));
                             
 			});
-                        $.ajax({
-                            url: 'lager.json',
-                            dataType: 'json',
-                            type: 'get',
-                            cache: false,
-                            success: function(data){
-                                var list_data = '';
-                                $.each(data, function(index, value){
-                                    list_data += '<tr>';
-                                    list_data += '<td>'+value.id+'</td>';
-                                    list_data += '<td>'+value.artikel+'</td>';
-                                    list_data += '<td><select name="soll" id="soll" value="'+value.soll+'">';
-                                    var start = value.soll;
-                                    console.log(start);
-                                    for (var i= start; i < 1; i--) {
-                                            list_data += '<option>'+ i +'</option>';
-                                            }
-                                    list_data += '<option selected>0</option></select>';
-                                    list_data += '</td>';
-                                    list_data += '</tr>';
-                                });
-                                console.log(list_data);
-                                $('#list_table').append(list_data);
-                            }
-                        });
 		  });
 	</script>
 
@@ -89,14 +64,38 @@
 
 	<div role="main" class="container-fluid">
 		
-                    <table id="list_table">
-                        <thead>
-                            <tr>
+                    <table id="myTable">
+                        <tr>
                             <th>Nr</th>
                             <th>Sorte</th>
                             <th>ist</th>
-                            </tr>
-                        </thead>
+                        </tr>
+                        <?php
+                            $filename = 'lager.json';
+                            $json = file_get_contents($filename);
+                            $data = json_decode($json);
+
+                            foreach($data as $item) {
+                                echo '<tr>';
+                                echo '<td><div class="ui-field-contain"><input type="text" id="id" name="id" value="'.$item->id.'" readonly size="2"></div></td>'."\n";
+                                echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="35"</td>'."\n";
+                                
+                                
+                                echo '<td><select name="soll" id="soll" value="'.$item->soll.'">."\n";';
+                                        echo '<option>0</option>'."\n";
+                                        echo '<option>1</option>'."\n";
+                                        echo '<option>2</option>'."\n";
+                                        echo '<option>3</option>'."\n";
+                                        echo '<option>4</option>'."\n";
+                                        echo '<option>5</option>'."\n";
+                                        echo '<option>6</option>'."\n";
+                                        echo '<option>7</option>'."\n";
+                                        echo '</select>';
+                                echo '</td>';
+                                echo '</tr>';
+                            }
+                        ?>
+
                     </table>
 			<input type="button" value="send" id="MyButton" >
 	</div><!-- /content -->
