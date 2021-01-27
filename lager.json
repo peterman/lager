@@ -22,14 +22,14 @@
  },
  {
    "id": 4,
-   "artikel": "Feldschlösschen radler naturtrüb",
+   "artikel": "Feldschlösschen radler",
    "einheit": "Kasten",
    "soll": 3,
    "ist": 1
  },
  {
    "id": 5,
-   "artikel": "Feldschlösschen radler naturtrüb alkoholfrei",
+   "artikel": "Feldschlösschen radler alkoholfrei",
    "einheit": "Kasten",
    "soll": 1,
    "ist": 1
@@ -71,7 +71,7 @@
  },
  {
    "id": 11,
-   "artikel": "Boinade Kräuter",
+   "artikel": "Bionade Kräuter",
    "einheit": "Kasten",
    "soll": 2,
    "ist": 1
