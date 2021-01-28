@@ -1,5 +1,7 @@
 <?php
 $bestell_datum = date("d.m.Y");
+$tnextfriday = strtotime("next Friday");
+$liefer_datum = date(d.m.Y", $tnextfriday)
 $bestell_nummer = date("Ymd")."_Bestellung_Weissig2011";
 $pdfAuthor = "vermietung@weissig2011.de";
 
@@ -8,7 +10,7 @@ $rechnungs_header = '
 Weissig 2011 e.V.
 Hauptstrasse 8a';
 
-$rechnungs_footer = nl2br("\nWir bitten um eine Begleichung der Rechnung innerhalb von 14 Tagen \n nach Erhalt. Bitte Überweisen Sie den vollständigen Betrag an:
+$rechnungs_footer = nl2br("\nWir bitten um Lieferung bis maximal ".$liefer_datum." . Vielen Dank.\n Das Vereinshaus-Team.
 ");
 
 $filename = 'lager.json';
