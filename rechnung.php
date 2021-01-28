@@ -26,7 +26,7 @@ $pdfName = $bestell_nummer.".pdf";
 // stark eingeschränkt.
 
 $html = '
-<table cellpadding="3" cellspacing="0" style="width: 100%; table-striped; ">
+<table cellpadding="3" cellspacing="0" style="width: 100%; ">
 	<tr>
             <td>'.nl2br(trim($rechnungs_header)).'</td>
             <td> </td>    
@@ -43,7 +43,7 @@ Bestellung Vereinshaus
 </table>
 <br>
 
-<table cellpadding="3" cellspacing="0" style="width: 100%; border-collapse:collapse;" border="0">
+<table cellpadding="3" cellspacing="0" style="width: 100%; border-collapse:collapse;" table-striped border="0">
 	<tr style="background-color: #cccccc; padding:5px;">
 		<td style="padding:5px;"><b>Bezeichnung</b></td>
 		<td style="text-align: center;"><b>Menge</b></td>
