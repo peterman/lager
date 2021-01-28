@@ -52,10 +52,13 @@ Bestellung Vereinshaus
 			
 	
 foreach($data as $posten) {
-	$menge = $posten->soll;
+	$menge = $posten->soll - $posten->ist;
+        if ($menge == "0") {
+            continue;
+        }
 	$html .= '<tr style="border-bottom: 1px solid black;">
                 <td>'.$posten->artikel.'</td>
-				<td style="text-align: center;">'.$posten->soll.'</td>		
+				<td style="text-align: center;">'.$menge.'</td>		
 				
               </tr>';
 }
