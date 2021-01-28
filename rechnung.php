@@ -10,7 +10,7 @@ $rechnungs_header = '
 Weissig 2011 e.V.
 Hauptstrasse 8a';
 
-$rechnungs_footer = "Wir bitten um Lieferung bis maximal ".$liefer_datum." . Vielen Dank.\n Das Vereinshaus-Team.";
+$rechnungs_footer = "Wir bitten um Lieferung bis maximal  . Vielen Dank.\n Das Vereinshaus-Team.";
 
 $filename = 'lager.json';
 //$json = file_get_contents($filename);
