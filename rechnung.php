@@ -69,7 +69,7 @@ $html .="</table>";
 
 
 $html .= '
-<br><hr><p>&nbsp;</p>'.$rechnungs_footer;
+<br><hr>'.$rechnungs_footer;
 
 
 
