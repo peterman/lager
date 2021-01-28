@@ -2,5 +2,16 @@
     border: 0;
     background: transparent;
 }
+
+.logo {
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
  
- 
+tr:nth-child(odd) {background-color: #8198ff;}
+th {
+    color: #ffffff;
+    background-color: #8198ff;
+}
