@@ -107,7 +107,7 @@ $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_RIGHT);
 $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 // Automatisches Autobreak der Seiten
-$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+$pdf->SetAutoPageBreak(TRUE, $PDF_MARGIN_BOTTOM);
 
 // Image Scale 
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
