@@ -1,8 +1,11 @@
-<html>
+<html lang="de">
 <head>
     <title>Bestellungen</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-control" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="style.css" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -39,14 +42,14 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
       <a class="navbar-brand" href="#">Getr&auml;nke Bestellung</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <div class="collapse navbar-collapse text-right" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
@@ -64,9 +67,8 @@
 
 	<div role="main" class="container-fluid">
 		
-                    <table id="myTable">
+                    <table class="table table-hover " id="myTable">
                         <tr>
-                            <th>Nr</th>
                             <th>Sorte</th>
                             <th>soll</th>
                             <th>ist</th>
@@ -78,8 +80,8 @@
 
                             foreach($data as $item) {
                                 echo '<tr>';
-                                echo '<td><input type="text" id="id" name="id" value="'.$item->id.'" readonly size="1"></div></td>'."\n";
-                                echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="27"></td>'."\n";
+                                //echo '<td><input type="hidden" id="id" name="id" value="'.$item->id.'" readonly size="1"></div></td>'."\n";
+                                echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="35"></td>'."\n";
                                 echo '<td><input type="text" id="soll" name="soll" value="'.$item->soll.'" readonly size="1"></td>';
                                 
                                 echo '<td><select name="ist" id="ist" value="'.$item->ist.'">."\n";';
