@@ -43,7 +43,7 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
-      <a class="navbar-brand" href="#">Getr&auml;nke Bestellung</a>
+      <a class="navbar-brand" href="index.php"><img class="logo" src="images/logo_verein.svg" href="index.php" alt="logo" ></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
