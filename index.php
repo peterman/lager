@@ -71,20 +71,18 @@
                 </div>
             </nav>
             <div class="jumbotron" id="bestinfo">
-                <h4>Bestellungen</h4>
-                <p>
-                    blabalal
-                lllsl
-                ertfcdc
-                </p>
+                <h1>Bestellungen Vereinshaus</h1>
+                <p>Hier können die Bestellungen für das Vereinshaus ausgelöst werden. 
+                    Bitte in nachfolgender Liste den Bestand aufnehmen und am Ende den "Bestellen-Button" drücken. 
+                    Der Rest geht dann automatisch. Im Moment wird nur eine PDF erstellt, später dann diese direkt per Mail versendet.</p>
                 <a class="btn btn-primary btn-sm " id="besthide" href="#">Weiter</a>
             </div>
             <div id="besttable">
                 <table id="myTable">
                     <tr>
                         <th>Sorte</th>
-                        <th>soll</th>
-                        <th>ist</th>
+                        <th>Soll</th>
+                        <th>Ist</th>
                     </tr>
                     <?php
                         $filename = 'lager.json';
@@ -111,7 +109,7 @@
                 </table>
 
             
-                <input type="button" value="send" id="MyButton" >
+                <input type="button" value="Bestellen" id="MyButton" >
             </div>
 	</div><!-- /content -->
     </div><!-- /page -->
