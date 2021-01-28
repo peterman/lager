@@ -11,7 +11,7 @@ $rechnungs_header = '
 Weissig 2011 e.V.
 Hauptstrasse 8a';
 
-$rechnungs_footer = nl2br("Wir bitten um Lieferung bis maximal ".$liefer_datum." .\n Vielen Dank.\n\n Das Vereinshaus-Team.");
+$rechnungs_footer = nl2br("\nWir bitten um Lieferung bis maximal Freitag, den  ".$liefer_datum." .\n Vielen Dank.\nDas Vereinshaus-Team.");
 
 $filename = 'lager.json';
 //$json = file_get_contents($filename);
