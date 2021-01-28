@@ -4,6 +4,7 @@ $tnextfriday = strtotime("next Friday");
 $liefer_datum = date("d.m.Y", $tnextfriday);
 $bestell_nummer = date("Ymd")."_Bestellung_Weissig2011";
 $pdfAuthor = "vermietung@weissig2011.de";
+$PDF_MARGIN_BOTTOM = 20;
 
 $rechnungs_header = '
 <img src="logo.jpg">
