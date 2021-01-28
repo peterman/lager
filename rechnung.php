@@ -1,7 +1,7 @@
 <?php
 $bestell_datum = date("d.m.Y");
 $tnextfriday = strtotime("next Friday");
-$liefer_datum = date(d.m.Y", $tnextfriday)
+$liefer_datum = date(d.m.Y", $tnextfriday);
 $bestell_nummer = date("Ymd")."_Bestellung_Weissig2011";
 $pdfAuthor = "vermietung@weissig2011.de";
 
