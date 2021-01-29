@@ -74,8 +74,7 @@
                 <h1>Bestellungen Vereinshaus</h1>
                 <p>
 		<?php
-			echo nl2br("Hier k&ouml;nnen die Bestellungen für das Vereinshaus ausgel&ouml;st werden. \n
-                    Bitte in nachfolgender Liste den Bestand aufnehmen und \nam Ende den "Bestellen-Button" dr&uuml;cken. 
+			echo nl2br("Hier k&ouml;nnen die Bestellungen für das Vereinshaus ausgel&ouml;st werden. \n Bitte in nachfolgender Liste den Bestand aufnehmen und \nam Ende den "Bestellen-Button" dr&uuml;cken. 
                     Der Rest geht dann automatisch.\n Im Moment wird nur eine PDF erstellt, sp&auml;ter dann diese direkt per Mail versendet.");
 				?>
 		    </p>
