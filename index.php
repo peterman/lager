@@ -81,7 +81,7 @@
             </div>
             <div id="besttable">
                 <table id="myTable">
-                    <tr style="border-bottom: 2px solid #000;">
+                    <tr class="spaceUnder">
                         <th>Sorte</th>
                         <th>Soll</th>
                         <th>Ist</th>
