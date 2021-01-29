@@ -72,9 +72,9 @@
             </nav>
             <div class="jumbotron" id="bestinfo">
                 <h1>Bestellungen Vereinshaus</h1>
-                <p>Hier können die Bestellungen für das Vereinshaus ausgelöst werden. 
-                    Bitte in nachfolgender Liste den Bestand aufnehmen und am Ende den "Bestellen-Button" drücken. 
-                    Der Rest geht dann automatisch. Im Moment wird nur eine PDF erstellt, später dann diese direkt per Mail versendet.</p>
+                <p>Hier k&ouml;nnen die Bestellungen fÃ¼r das Vereinshaus ausgel&ouml;st werden. 
+                    Bitte in nachfolgender Liste den Bestand aufnehmen und am Ende den "Bestellen-Button" dr&uuml;cken. 
+                    Der Rest geht dann automatisch. Im Moment wird nur eine PDF erstellt, sp&auml;ter dann diese direkt per Mail versendet.</p>
                 <a class="btn btn-primary btn-sm " id="besthide" href="#">Weiter</a>
             </div>
             <div id="besttable">
