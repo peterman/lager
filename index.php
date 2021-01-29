@@ -81,12 +81,12 @@
             </div>
             <div id="besttable">
                 <table id="myTable">
-                    <tr>
+                    <tr style="border-bottom: 2px solid #000;">
                         <th>Sorte</th>
                         <th>Soll</th>
                         <th>Ist</th>
                     </tr>
-		    <hr>	
+		    	
                     <?php
                         $filename = 'lager.json';
                         $json = file_get_contents($filename);
