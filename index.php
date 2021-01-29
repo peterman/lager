@@ -86,6 +86,7 @@
                         <th>Soll</th>
                         <th>Ist</th>
                     </tr>
+		    <hr>	
                     <?php
                         $filename = 'lager.json';
                         $json = file_get_contents($filename);
@@ -110,7 +111,7 @@
 
                 </table>
 
-            
+            	<hr>
                 <input type="button" value="Bestellen" id="MyButton" >
             </div>
 	</div><!-- /content -->
