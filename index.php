@@ -6,43 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <?php 
-        echo '<link href="style.css?"'.time().' rel="stylesheet" type="text/css" />';
+        echo '<link href="css/style.css?"'.time().' rel="stylesheet" type="text/css" />';
     ?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
 	
-	<script>
-	    $(document).ready(function(){
-			$('#MyButton').click(function(){
-                            event.preventDefault();
-                            var data = $('tr').map(function(){
-                                var obj={};
-                                $(this).find('input, select').each(function(){
-                                   obj[this.name]=$(this).val();
-                                });
-                                return obj;
-                            }).get();
-                            var xhr = new XMLHttpRequest();
-                            xhr.open('POST','rechnung.php',true);
-                            xhr.setRequestHeader('Content-Type','application/json; charset=UTF-8');
-                            xhr.onreadystatechange = function() {
-                                if(xhr.readyState == 4 && xhr.status == 200) {
-                                    window.location.assign(xhr.responseText);
-                                }
-                            }
-                            xhr.send(JSON.stringify(data));
-                            
-			});
-                        $('#besthide').click(function(){
-                            $('#bestinfo').hide();
-                            $('#besttable').show();
-                        });
-                        $('#besttable').hide();
-                        
-		  });
-	</script>
-
 
 
 </head>
@@ -50,29 +20,41 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
-                <a class="navbar-brand" href="index.php"><img class="logo" src="images/logo_verein.svg" href="index.php" alt="logo" ></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse text-right" id="navbarTogglerDemo02">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="rechnung.php">Rechnung</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                  </ul>
-                </div>
-            </nav>
+            <header>
+   
+                <?php $page = basename($_SERVER['PHP_SELF']); ?>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
+                  <a class="navbar-brand" href="index.php"><img class="logo" src="images/logo_verein.svg" href="index.php" alt="logo" ></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse navigation text-right" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item navli <?php echo ($page == "index.php" ? "active" : "");?>">
+                          <a class="nav-link" href="index.php">Home<span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item navli  <?php echo ($page == "anfrage.php" ? "active" : "");?>">
+                          <a class="nav-link" href="anfrage.php">Anfrage</a>
+                        </li>
+                        <li class="nav-item navli  <?php echo ($page == "liste.php" ? "active" : "");?>">
+                          <a class="nav-link" href="liste.php">Liste</a>
+                        </li>
+                        <li class="nav-item navli  <?php echo ($page == "test2.php" ? "active" : "");?>">
+                          <a class="nav-link" href="test2.php">Veranstaltungen</a>
+                        </li>
+                        <li class="nav-item navli  <?php echo ($page == "kalender.php" ? "active" : "");?>">
+                          <a class="nav-link" href="kalender.php">Kalender</a>
+                        </li>
+                        <li class="nav-item navli  <?php echo ($page == "contact.php" ? "active" : "");?>">
+                          <a class="nav-link" href="contact.php">Contact</a>
+                        </li>
+                      </ul>
+                  </div>
+                  </nav>
+              </header>
             <div class="jumbotron" id="bestinfo">
                 <h1>Bestellungen Vereinshaus</h1>
-		    <p>Hier k&ouml;nnen die Bestellungen für das Vereinshaus ausgel&ouml;st werden.</p> 
+		    <p>Hier k&ouml;nnen die Bestellungen f&uuml;r das Vereinshaus ausgel&ouml;st werden.</p> 
 			<p>Bitte in nachfolgender Liste den Bestand aufnehmen und </p>
 			<p>am Ende den "Bestellen-Button" dr&uuml;cken. Der Rest geht dann automatisch.</p>
 		    <p>Im Moment wird nur eine PDF erstellt, sp&auml;ter dann diese direkt per Mail </p>
@@ -84,6 +66,7 @@
                     <tr class="spaceUnder">
                         <th>Sorte</th>
                         <th>Soll</th>
+                        <th></th>
                         <th>Ist</th>
                     </tr>
 		    	
@@ -96,7 +79,7 @@
                             echo '<tr>';
                             echo '<td><input type="text" id="artikel" name="artikel" value="'.$item->artikel.'" readonly size="30"></td>'."\n";
                             echo '<td><input type="text" id="soll" name="soll" value="'.$item->soll.'" readonly size="1"></td>';
-
+                            echo '<td><input type="hidden" id="einheit" name="einheit" value="'.$item->einheit.'" readonly></td>';
                             echo '<td><select name="ist" id="ist" value="'.$item->ist.'">."\n";';
                             $start = $item->soll;
                             echo '<option selected>'.$start.'</option>'."\n";

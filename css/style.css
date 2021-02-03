@@ -1,0 +1,43 @@
+html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  height: 100%;
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+nav {
+  font-size: 1.0em;
+  background-color: rgba(204, 204, 204, 1);
+  border-bottom: 3px rgb(67, 68, 71) solid;
+  height: auto !important;
+  min-height: 70px;
+}
+
+#myTable input {
+    border: 0;
+    background: transparent;
+}
+
+.logo {
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+ 
+tr:nth-child(odd) {background-color: rgba(204, 204, 204, 1);}
+
+tr.spaceUnder>th {
+  color: #000;
+  background-color: rgba(204, 204, 204, 1);  
+  padding-bottom: 0.7em;
+  border-bottom: 3px solid #000;
+}

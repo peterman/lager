@@ -11,7 +11,7 @@ $rechnungs_header = '
 Weissig 2011 e.V.
 Hauptstrasse 8a';
 
-$rechnungs_footer = nl2br("\nWir bitten um Lieferung bis maximal Freitag, den  ".$liefer_datum." .\n Vielen Dank.\nDas Vereinshaus-Team.");
+$rechnungs_footer = nl2br(" \nWir bitten um Lieferung bis maximal Freitag, den  ".$liefer_datum." .\n\n Vielen Dank.\n\nDas Vereinshaus-Team.");
 
 $filename = 'lager.json';
 //$json = file_get_contents($filename);
@@ -34,22 +34,21 @@ $html = '
             <td> </td>    
             <td style="text-align: right">Bestelldatum: '.$bestell_datum.'<br>
             </td>
-            </tr>
+        </tr>
 	<tr>
-        <td style="font-size:1.3em; font-weight: bold;">
-<br><br>
-Bestellung Vereinshaus
-<br>
- </td>
-</tr>
+            <td colspan="2" style="font-size:1.3em; font-weight: bold;">
+                <br><br>Bestellung Vereinshaus<br>
+            </td>
+        </tr>
 </table>
 <br>
 
 <table cellpadding="3" cellspacing="0" style="width: 100%; border-collapse:collapse;" table-striped border="0">
 	<tr style="background-color: #cccccc; padding:5px;">
 		<td style="padding:5px;"><b>Bezeichnung</b></td>
+                <td></td>
 		<td style="text-align: center;"><b>Menge</b></td>
-		
+		<td style="text-align: center;"><b>Einheit</b></td>
 	</tr>';
 			
 	
@@ -59,17 +58,17 @@ foreach($data as $posten) {
             continue;
         }
 	$html .= '<tr style="border-bottom: 1px solid black;">
-                <td>'.$posten->artikel.'</td>
-				<td style="text-align: center;">'.$menge.'</td>		
-				
+                <td colspan="2">'.$posten->artikel.'</td>
+                
+		<td style="text-align: center;">'.$menge.'</td>		
+		<td style="text-align: center;">'.$posten->einheit.'</td>		
               </tr>';
 }
 $html .="</table>";
 
 
 
-$html .= '
-<br><hr>'.$rechnungs_footer;
+$html .= '<br><br>'.$rechnungs_footer;
 
 
 
