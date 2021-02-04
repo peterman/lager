@@ -41,3 +41,18 @@ tr.spaceUnder>th {
   padding-bottom: 0.7em;
   border-bottom: 3px solid #000;
 }
+
+.bg-image-home {
+  /* The image used */
+  background-image: url(../images/Verein.jpg);
+
+ /* Full height */
+  height: 80%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.jumbotron { display:none;}

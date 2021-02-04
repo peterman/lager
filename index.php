@@ -8,7 +8,7 @@
     <?php 
         echo '<link href="css/style.css?"'.time().' rel="stylesheet" type="text/css" />';
     ?>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
@@ -52,15 +52,17 @@
                   </div>
                   </nav>
               </header>
-            <div class="jumbotron" id="bestinfo">
-                <h1>Bestellungen Vereinshaus</h1>
-		    <p>Hier k&ouml;nnen die Bestellungen f&uuml;r das Vereinshaus ausgel&ouml;st werden.</p> 
-			<p>Bitte in nachfolgender Liste den Bestand aufnehmen und </p>
-			<p>am Ende den "Bestellen-Button" dr&uuml;cken. Der Rest geht dann automatisch.</p>
-		    <p>Im Moment wird nur eine PDF erstellt, sp&auml;ter dann diese direkt per Mail </p>
-		    <p>an den Lieferanten versendet und gespeichert.</p>
-                <a class="btn btn-primary btn-sm " id="besthide" href="#">Weiter</a>
-            </div>
+            <div class="bg-image-home">
+                <div class="jumbotron" id="bestinfo">
+                    <h1>Bestellungen Vereinshaus</h1>
+                        <p>Hier k&ouml;nnen die Bestellungen f&uuml;r das Vereinshaus ausgel&ouml;st werden.</p> 
+                            <p>Bitte in nachfolgender Liste den Bestand aufnehmen und </p>
+                            <p>am Ende den "Bestellen-Button" dr&uuml;cken. Der Rest geht dann automatisch.</p>
+                        <p>Im Moment wird nur eine PDF erstellt, sp&auml;ter dann diese direkt per Mail </p>
+                        <p>an den Lieferanten versendet und gespeichert.</p>
+                    <a class="btn btn-primary btn-sm " id="besthide" href="#">Weiter</a>
+                </div>
+            </div>    
             <div id="besttable">
                 <table id="myTable">
                     <tr class="spaceUnder">

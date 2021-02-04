@@ -24,5 +24,6 @@ $(document).ready(function(){
                             $('#besttable').show();
                         });
                         $('#besttable').hide();
+                        $(".jumbotron").delay(2000).fadeIn(500);
                         
 		  });
